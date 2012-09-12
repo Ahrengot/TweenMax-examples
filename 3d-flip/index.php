@@ -105,7 +105,7 @@
 			});
 			
 			tl.to($currImg, 0.4, {
-				css: {scaleX: 0, scaleY: 0.8, rotation: randomVal, alpha: 0.3}, 
+				css: {scaleX: 0, scaleY: 0.8, skewY: randomVal, alpha: 0.3}, 
 				ease:Power2.easeIn 
 			});
 			
@@ -115,8 +115,8 @@
 			})
 			
 			tl.fromTo($images.eq(index), 0.3, 
-				{css: {scaleX: 0, scaleY: 0.8, rotation: randomVal, alpha: 0.3}}, 
-				{css: {scaleX: 1, scaleY: 1, rotation: 0, alpha: 1}, ease:Back.easeOut}
+				{css: {scaleX: 0, scaleY: 0.8, skewY: randomVal, alpha: 0.3}}, 
+				{css: {scale: 1, skewY: 0, alpha: 1}, ease:Back.easeOut}
 			);
 		};
 
