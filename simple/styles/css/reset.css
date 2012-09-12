@@ -205,3 +205,46 @@ input:invalid, textarea:invalid { background-color: $error-color; }
 
 table { border-collapse: collapse; border-spacing: 0; }
 td { vertical-align: top; }
+
+
+/* Footer */
+#site-footer {
+   position: absolute;
+   left: 0; right: 0; bottom: 0;
+   padding: 10px 0 60px;
+   margin: 30px 0 0;
+   background: #eee;
+   overflow: hidden;
+   clear: both;
+   border-top: thin solid #ddd;
+}
+
+.inner-footer  {
+   width: 80%;
+   max-width: 1100px;
+   margin: 0 auto;
+}
+
+#back-to-tutorial { 
+   line-height: 59px; 
+   color: #bbb; 
+   letter-spacing: 1px;
+}
+
+#back-to-tutorial:hover {
+   text-decoration: none;
+   color: #999;
+   -webkit-transition: all 0.15s ease-out;
+   -moz-transition: all 0.15s ease-out;
+   -o-transition: all 0.15s ease-out;
+   -ms-transition: all 0.15s ease-out;
+   transition: all 0.15s ease-out;
+}
+
+#back-to-tutorial:hover:before {
+   content: '←';
+}
+
+/* Semantic helper classes */
+.left { float: left; }
+.right { float: right; }

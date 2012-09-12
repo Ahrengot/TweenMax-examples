@@ -10,6 +10,7 @@
   		$desc = "Simple example using TweenMax";
   		$img_url = "Simple example using TweenMax | Ahrengot.com";
   		
+  		$tutorial_url = 'http://ahrengot.com/tutorials/';
   		$url = "http://".$_SERVER["SERVER_NAME"].$_SERVER["REQUEST_URI"];
   	?>
 	
@@ -30,7 +31,7 @@
   
   	<link rel="stylesheet" href="styles/css/reset.css">
   	<style type="text/css">
-  		#container { width: 80%; margin: auto; }
+  		#container > header, #main { width: 80%; margin: auto; }
   	</style>
 </head>
 
@@ -43,8 +44,11 @@
 		<div id="main" role="main">
 			
 		</div>
-		<footer>
-		
+		<footer id="site-footer" class="clearfix">
+			<section class="inner-footer">
+				<a id="back-to-tutorial" href="<?= $tutorial_url; ?>" target="_self">Back to tutorial</a>
+				<a href="http://ahrengot.com/" title="Go to my Website (Opens in a new window)" target="_blank"><img class="right" src="http://ahrengot.com/wp-content/themes/ahrengot-dev/library/img/ahrengot-logo.png" width="204" height="59" alt="Jens Ahrengot Boddum" /></a>
+			</section>
 		</footer>
 	</div> <!-- eo #container -->
 
