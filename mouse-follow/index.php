@@ -38,12 +38,10 @@
 			width: 100px; height: 100px;
 			top: 50%; left: 50%;
 			margin: -50px 0 0 -50px;
-			background: #bada55;
+			background: purple;
 			border-radius: 50px;
 			-webkit-backface-visibility:hidden;
 		}
-
-		html { cursor: pointer; }
   	</style>
 </head>
 
@@ -82,7 +80,7 @@
 		var $box = $('#box');
 
 		function moveBox(e) {
-			TweenLite.to($box, 1.4, { css: { left: e.pageX, top: e.pageY }});
+			TweenLite.to($box, 0.7, { css: { left: e.pageX, top: e.pageY }});
 		}
 
 		$(window).on('mousemove', moveBox);
