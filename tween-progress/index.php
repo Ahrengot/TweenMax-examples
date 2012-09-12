@@ -29,7 +29,7 @@
 	
   	<title><?= $title; ?> | Ahrengot.com</title>
   
-  	<link rel="stylesheet" href="styles/css/reset.css">
+  	<link rel="stylesheet" href="../styles/css/reset.css">
   	<style type="text/css">
   		#container > header, #main { width: 80%; margin: 100px auto 0; }
 
@@ -96,7 +96,7 @@
 
   	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.js"></script>
   	<script>window.jQuery || document.write("<script src='js/libs/jquery-1.8.1.min.js'>\x3C/script>")</script>
-  	<script src="js/libs/gs/TweenMax.min.js"></script>
+  	<script src="../js/libs/gs/TweenMax.min.js"></script>
 
 	<script type="text/javascript">
 		var $letters	= $('.text span'),
