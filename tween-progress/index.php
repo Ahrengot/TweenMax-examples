@@ -102,7 +102,11 @@
 		var $letters	= $('.text span'),
 			tl			= new TimelineMax({paused: true});
 		
-		tl.staggerFrom($letters, 1.5, {css: {alpha: 0, top: "-300", scale: 0}, ease: Elastic.easeOut}, 0.2);
+		tl.staggerFrom($letters, 1.5, {
+			css: {alpha: 0, top: "-300", scale: 0, rotation: -20}, 
+			ease: Elastic.easeOut
+		}, 0.2);
+		
 		$(window).on('mousemove', function(e) {
 			var prog = e.pageX / window.innerWidth;
 			tl.progress(prog);
