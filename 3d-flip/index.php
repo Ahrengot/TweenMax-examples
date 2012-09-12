@@ -32,8 +32,26 @@
   	<link rel="stylesheet" href="../styles/css/reset.css">
   	<style type="text/css">
   		#container > header, #main { width: 80%; margin: 100px auto; }
+  		
+  		html, body { height: 100%; }
+  		
+  		body { 
+  			background-image: linear-gradient(bottom, rgb(36,36,36) 40%, rgb(20,20,20) 70%);
+			background-image: -o-linear-gradient(bottom, rgb(36,36,36) 40%, rgb(20,20,20) 70%);
+			background-image: -moz-linear-gradient(bottom, rgb(36,36,36) 40%, rgb(20,20,20) 70%);
+			background-image: -webkit-linear-gradient(bottom, rgb(36,36,36) 40%, rgb(20,20,20) 70%);
+			background-image: -ms-linear-gradient(bottom, rgb(36,36,36) 40%, rgb(20,20,20) 70%);
 
-  		body { background: #222; color: white; }
+			background-image: -webkit-gradient(
+				linear,
+				left bottom,
+				left top,
+				color-stop(0.4, rgb(36,36,36)),
+				color-stop(0.7, rgb(20,20,20))
+			);
+  			
+  			color: white;
+  		}
 
   		.images { position: relative; padding: 0; cursor: pointer; }
   		.images li { list-style: none; }
@@ -57,7 +75,7 @@
 		<div id="main" role="main">
 			<header>
 				<h1><?= $title; ?></h1>
-				<p>Click images to flip</p>
+				<p>Click images to flip through gallery</p>
 			</header>
 
 			<section id="canvas">
@@ -96,7 +114,7 @@
 			isAnimating = true;
 			index = (index++ >= numImgs - 1) ? 0 : index;
 
-			var randomVal = Math.random() * 14 - 7;  
+			var randomVal = Math.random() * 12 - 6;  
 			var tl = new TimelineLite({
 				onComplete: function() {
 					$currImg = $images.eq(index);
@@ -120,19 +138,13 @@
 			);
 		};
 
-		// Animate gallery in
-		TweenMax.fromTo($currImg, 1,
-			{
-				css: {scaleX: 0, scaleY: 0.5, skewY: 5, alpha: 0}
-			}, 
-			{
-				css: {scale: 1, alpha: 1, skewY: 0},
-				ease: Power3.easeInOut, 
-				onComplete: function() {
+		// Animate first image in
+		TweenMax.fromTo($currImg, 1.8,
+			{css: {scaleX: 0, scaleY: 0.5, skewY: 5, alpha: 0}}, 
+			{css: {scale: 1, alpha: 1, skewY: 0}, ease: Power3.easeInOut, onComplete: function() {
 					$imgWrap.on('click', flip);
-				}
-			}
-		);
+		}});
+		
 		$currImg.show();
 
 	</script>
