@@ -207,7 +207,7 @@ table { border-collapse: collapse; border-spacing: 0; }
 td { vertical-align: top; }
 
 #site-footer, #site-header {
-   /*position: absolute;*/
+   position: absolute;
    left: 0; right: 0; top: 0;
    padding: 5px 0;
    margin: 0;

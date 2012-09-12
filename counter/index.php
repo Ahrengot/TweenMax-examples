@@ -31,7 +31,7 @@
   
   	<link rel="stylesheet" href="styles/css/reset.css">
   	<style type="text/css">
-  		#container > header, #main { width: 80%; margin: 50px auto; }
+  		#container > header, #main { width: 80%; margin: 110px auto; }
 
 		.number { 
 			text-rendering: optimizeLegibility;
@@ -40,8 +40,6 @@
 			color: #5ed9ef; 
 			margin: 10px 0;
 		}
-
-
 
 		form { margin: 25px 0 0; }
   	</style>
